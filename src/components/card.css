@@ -116,7 +116,7 @@ h1 {
   display: flex;
   width: 130px;
   height: 20px;
-
+  border-color: #d1431a;
   align-items: center;
   justify-content: space-between;
   background-color: #d1431a; /* Orange background color */
@@ -216,6 +216,7 @@ h1 {
     height: 20px;
     align-items: center;
     justify-content: space-between;
+    border: #d1431a;
     background-color: #d1431a; /* Orange background color */
     border-radius: 30px; /* Rounded edges */
     padding: 15px 10px;
