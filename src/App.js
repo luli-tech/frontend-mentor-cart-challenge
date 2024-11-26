@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import NavbarWithSidebar from "./components/navbar";
+import {
+  RouterProvider,
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import Cart from "./components/cart";
+import DessertCard from "./components/card";
+import OrderConfirmed from "./components/confirmCart";
 function App() {
+  let router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<NavbarWithSidebar />}>
+        <Route index element={<DessertCard />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/confirm" element={<OrderConfirmed />} />
+      </Route>
+    )
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 

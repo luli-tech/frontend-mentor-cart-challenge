@@ -1,0 +1,193 @@
+/* DessertCard.css */
+
+/* Container for each dessert card */
+body {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.body {
+  /* display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  margin: auto; */
+  /* padding: 30px; */
+}
+.card-container {
+  display: grid;
+  gap: 15px;
+  width: min(100%, 48rem);
+  position: relative;
+  place-items: center;
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  grid-template-columns: 246px 246px 246px;
+}
+.dessert-card {
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 250px;
+  gap: 25px;
+  width: 250px;
+  justify-content: center;
+}
+.dessert-card:hover .dessert-image {
+  border: 2px solid #f76c6c;
+  transition: 0.2s;
+}
+h1 {
+  place-self: left;
+  padding-bottom: 10px;
+}
+
+/* Style for dessert images */
+.dessert-image {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 200px;
+}
+.dessert-image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Info section inside the dessert card */
+.dessert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Title of the dessert */
+.dessert-title {
+  font-size: 0.8rem;
+  color: #5e5e5e;
+}
+.dessert-category {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+/* Price of the dessert */
+.dessert-price {
+  color: #f76c6c;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Add to cart button */
+.add-to-cart-button {
+  background-color: white;
+  color: black;
+  border: 1px solid #f76c6c;
+  width: 130px;
+  padding: 15px 20px;
+  font-size: 0.7rem;
+  position: absolute;
+  bottom: 22%;
+  border-radius: 20px;
+  height: 20px;
+  display: flex;
+  font-weight: bold;
+  gap: 5px;
+  align-items: center;
+  right: 22%;
+  cursor: pointer;
+}
+
+/* Hover effect for the add to cart button */
+.add-to-cart-button:hover {
+  background-color: #ff5757;
+}
+.add-to-cart-button svg {
+  font-size: 10px;
+}
+.quantity-control {
+  display: flex;
+  width: 130px;
+  height: 20px;
+
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d1431a; /* Orange background color */
+  border-radius: 30px; /* Rounded edges */
+  padding: 15px 10px;
+  /* width: fit-content; */
+}
+
+.quantity-btn {
+  border: none;
+  background: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 12px;
+  border: 1px solid white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 2px 2px;
+  height: 18px;
+  width: 18px;
+}
+
+.quantity-display {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.quantity-btn:focus {
+  outline: none;
+}
+
+.quantity-btn:hover {
+  color: #ffc4b0; /* Light orange color on hover */
+}
+
+@media (max-width: 500px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-container {
+    display: grid;
+    width: min(80%, 70rem);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    place-items: center;
+  }
+  .dessert-card {
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 250px;
+    gap: 25px;
+    width: 250px;
+    justify-content: center;
+  }
+  .dessert-tit {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 10em) {
+  .body {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
