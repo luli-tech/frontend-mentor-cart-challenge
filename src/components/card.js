@@ -9,9 +9,8 @@ import OrderConfirmed from "./confirmCart";
 const DessertCard = () => {
   const dispatch = useDispatch();
 
-  const { cartItems, isLoading, error, cartContain, isVisible } = useSelector(
-    (state) => state.cart
-  );
+  const { cartItems, isLoading, error, cartContain, isVisible, scrollTo } =
+    useSelector((state) => state.cart);
   useEffect(() => {
     console.log(cartItems);
   });
@@ -19,7 +18,11 @@ const DessertCard = () => {
   useEffect(() => {
     dispatch(fetchData());
   }, [dispatch]);
-
+  useEffect(() => {
+    if (scrollTo) {
+      window.scrollTo({ top: 350, behavior: "smooth" });
+    }
+  }, [scrollTo]);
   function getmyCart(dessert) {
     dispatch(addToCart(dessert));
   }

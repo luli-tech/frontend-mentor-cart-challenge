@@ -206,8 +206,20 @@ h1 {
     font-weight: bold;
     gap: 5px;
     align-items: center;
-    right: 24%;
+    right: 26%;
     cursor: pointer;
+  }
+  .quantity-control {
+    display: flex;
+    width: 130px;
+    height: 20px;
+
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d1431a; /* Orange background color */
+    border-radius: 30px; /* Rounded edges */
+    padding: 15px 10px;
+    /* width: fit-content; */
   }
 }
 

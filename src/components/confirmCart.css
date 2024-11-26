@@ -131,12 +131,14 @@
 .order-button:hover {
   background-color: #ff3300;
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .order-container {
-    width: 400px;
+    max-width: 400px;
+    min-width: 300px;
+
     left: 50%;
-    bottom: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 0%;
+    transform: translate(-50%, 0%);
   }
 }
 

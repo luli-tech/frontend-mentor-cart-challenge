@@ -13,6 +13,7 @@ let initialState = {
   isLoading: false,
   isVisible: false,
   error: false,
+  scrollTo: false,
 };
 
 export const fetchData = createAsyncThunk("fetchData", async () => {
@@ -53,12 +54,14 @@ let cartSlice = createSlice({
     confirmOrder: (state, action) => {
       state.cartConfirmed.push(...state.cartContain);
       state.isVisible = true;
+      state.scrollTo = true;
     },
     toggle: (state) => {
       localStorage.removeItem("cart");
       state.isVisible = false;
       state.cartConfirmed = [];
       state.cartContain = [];
+      state.scrollTo = false;
       localStorage.setItem("cart", JSON.stringify([]));
     },
   },
