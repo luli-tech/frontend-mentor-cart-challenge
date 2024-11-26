@@ -11,7 +11,7 @@
   position: absolute;
   top: 10%;
   z-index: 10;
-  left: 25%;
+  left: 40%;
 }
 
 .order-header {
@@ -50,7 +50,12 @@
   background-color: #fff7eb;
   border-radius: 10px;
   padding: 15px;
+  height: 250px;
+  overflow: scroll;
   margin-bottom: 20px;
+}
+.order-summary::-webkit-scrollbar {
+  display: none;
 }
 
 .order-item {
@@ -129,7 +134,16 @@
 @media (max-width: 600px) {
   .order-container {
     width: 400px;
-    left: -50%;
+    left: 50%;
     bottom: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 1200px) {
+  .order-container {
+    width: 400px;
+    left: 30%;
+    bottom: 20%;
   }
 }
